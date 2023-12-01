@@ -40,6 +40,8 @@ public class GameController : MonoBehaviour
 
     public GameObject startInfo;
 
+    public AudioSource buttonClickAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -225,6 +227,11 @@ public class GameController : MonoBehaviour
         playerX.text.color = inactivePlayerColor.textColor;
         playerO.panel.color = inactivePlayerColor.panelColor;
         playerO.text.color = inactivePlayerColor.textColor;
+    }
+
+    public void playButtonAudio()
+    {
+        buttonClickAudio.Play();
     }
 
 }
